@@ -1,0 +1,12 @@
+@use "./colors";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+}
