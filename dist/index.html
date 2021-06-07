@@ -21,30 +21,32 @@
     />
     <!-- my stylesheet -->
     <link rel="stylesheet" href="./css/main.css" />
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-      .card {
-        padding: 3rem;
-      }
-    </style>
   </head>
   <body>
     <header class="header"></header>
     <main class="main">
+      <div class="selected">
+        <div class="selected__tag">
+          <h1 class="tag">Frontend</h1>
+          <button class="delete__tag" aria-label="remove tag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+              <path
+                fill="#FFF"
+                fill-rule="evenodd"
+                d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <button class="selected__clear">Clear</button>
+      </div>
       <div class="cards">
         <div class="card photosnap" data-tags="senior html css javaScript">
           <div class="card__company">
-            <p class="card__company__info">
-              Photosnap
-              <span class="card__new">New!</span>
-              <span class="card__featured">Featured</span>
-            </p>
+            <p class="card__company__info">Photosnap</p>
+            <p class="card__new">New!</p>
+            <p class="card__featured">Featured</p>
           </div>
 
           <div class="card__job">
@@ -67,11 +69,9 @@
         </div>
         <div class="card manage" data-tags="fullstack midweight python react">
           <div class="card__company">
-            <p class="card__company__info">
-              Manage
-              <span class="card__new">New!</span>
-              <span class="card__featured">Featured</span>
-            </p>
+            <p class="card__company__info">Manage</p>
+            <p class="card__new">New!</p>
+            <p class="card__featured">Featured</p>
           </div>
 
           <div class="card__job">
@@ -97,9 +97,8 @@
           data-tags=" frontend junior javaScript react sass"
         >
           <div class="card__company">
-            <p class="card__company__info">
-              Account <span class="new">New!</span>
-            </p>
+            <p class="card__company__info">Account</p>
+            <p class="card__new">New!</p>
           </div>
 
           <div class="card__job">
@@ -300,18 +299,6 @@
         </div>
       </div>
     </main>
-
-    <!-- Item Start -->
-
-    <!-- Role -->
-    Frontend
-    <!-- Level -->
-    Junior
-    <!-- Languages -->
-    JavaScript
-    <!-- Tools -->
-    React Sass
-    <!-- Item End -->
 
     <footer class="attribution">
       Challenge by
