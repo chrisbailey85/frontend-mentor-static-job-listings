@@ -35,6 +35,7 @@ button:focus {
   align-items: center;
   background-color: #fefefe;
   padding: 2rem;
+  margin: 0 1rem;
   &__tag {
     display: flex;
     align-items: center;
@@ -71,8 +72,9 @@ button:focus {
 // cards
 
 .card {
+  position: relative;
   background-color: #fefefe;
-  margin: 1.5rem 1rem 2.5rem;
+  margin: 3rem 1rem 3rem;
   padding: 2rem 1rem 1rem;
   border-radius: 10px;
   box-shadow: 0 10px 20px hsla(180, 29%, 50%, 0.267);
@@ -81,7 +83,6 @@ button:focus {
     font-size: 0.7rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-weight: 700;
     &__info {
       color: colors.$desaturated-dark-cyan;
@@ -95,6 +96,7 @@ button:focus {
     border-radius: 15px;
     color: #fefefe;
     background-color: colors.$desaturated-dark-cyan;
+    margin-left: 1rem;
   }
 
   &__featured {
@@ -136,9 +138,8 @@ button:focus {
   }
 
   &__tags {
-    margin: 0.5rem 0;
+    margin: 0.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -150,8 +151,59 @@ button:focus {
     padding: 0.4rem;
     font-weight: 700;
     color: colors.$desaturated-dark-cyan;
-    margin-top: 0.5rem;
+    margin: 0.5rem 1rem 0 0;
   }
+}
+
+// card img
+
+.photosnap::before,
+.manage::before,
+.account::before,
+.myhome::before,
+.loop--studios::before,
+.faceit::before,
+.shortly::before,
+.insure::before,
+.eyecam::before,
+.air--filter::before {
+  content: "";
+  height: 44px;
+  width: 44px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -22px;
+}
+.air--filter::before {
+  background-image: url("../images/the-air-filter-company.svg");
+}
+.eyecam::before {
+  background-image: url("../images/eyecam-co.svg");
+}
+.insure::before {
+  background-image: url("../images/insure.svg");
+}
+.shortly::before {
+  background-image: url("../images/shortly.svg");
+}
+.faceit::before {
+  background-image: url("../images/faceit.svg");
+}
+.loop--studios::before {
+  background-image: url("../images/loop-studios.svg");
+}
+.myhome::before {
+  background-image: url("../images/myhome.svg");
+}
+.account::before {
+  background-image: url("../images/account.svg");
+}
+.photosnap::before {
+  background-image: url("../images/photosnap.svg");
+}
+.manage::before {
+  background-image: url("../images/manage.svg");
 }
 .attribution {
   font-size: 11px;
