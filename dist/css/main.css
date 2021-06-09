@@ -15,6 +15,10 @@ button:focus {
   outline: 2px dotted #5ba4a4;
 }
 
+button {
+  cursor: pointer;
+}
+
 .header {
   height: 20vh;
   width: 100%;
@@ -69,6 +73,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 .card {
@@ -78,6 +83,9 @@ button:focus {
   padding: 2rem 1rem 1rem;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(91, 164, 164, 0.267);
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: transform 0.3s ease;
 }
 .card__company {
   width: 100%;
@@ -104,6 +112,8 @@ button:focus {
   font-size: 1rem;
   color: #2c3a3a;
   margin: 0.5rem 0;
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 .card__info {
   display: flex;
@@ -144,6 +154,7 @@ button:focus {
   font-weight: 700;
   color: #5ba4a4;
   margin: 0.5rem 1rem 0 0;
+  transition: background-color 0.3s ease, color 0.3s 0.05s ease;
 }
 
 .photosnap::before,
@@ -205,6 +216,119 @@ button:focus {
   background-image: url("../images/manage.svg");
 }
 
+.photosnap::after,
+.manage::after {
+  content: "";
+  height: 100%;
+  width: 5px;
+  background-color: #5ba4a4;
+  position: absolute;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  top: 0;
+  left: 0;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.card.hidden__anim {
+  transform: scale(1, 0);
+}
+
+@media (min-width: 768px) {
+  .card__info__container {
+    width: 40%;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__company {
+    margin-bottom: 1rem;
+  }
+  .card__info {
+    border: none;
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    background-image: url("../images/bg-header-desktop.svg");
+  }
+
+  .main {
+    padding: 0 3rem;
+  }
+
+  .card__info__container {
+    width: 30%;
+    margin-left: 6rem;
+  }
+
+  .photosnap::before,
+.manage::before,
+.account::before,
+.myhome::before,
+.loop--studios::before,
+.faceit::before,
+.shortly::before,
+.insure::before,
+.eyecam::before,
+.air--filter::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 1440px) {
+  .main {
+    padding: 0 6rem;
+  }
+
+  .card__info__container {
+    width: 25%;
+    margin-left: 7rem;
+  }
+
+  .photosnap::before,
+.manage::before,
+.account::before,
+.myhome::before,
+.loop--studios::before,
+.faceit::before,
+.shortly::before,
+.insure::before,
+.eyecam::before,
+.air--filter::before {
+    height: 66px;
+    width: 66px;
+  }
+}
+@media (pointer: fine) {
+  .selected__clear:hover {
+    text-decoration: underline;
+  }
+
+  .delete__tag:hover {
+    background-color: #000;
+  }
+
+  .card__heading:hover {
+    color: #5ba4a4;
+  }
+
+  .card__tag:hover {
+    background-color: #5ba4a4;
+    color: #fefefe;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
