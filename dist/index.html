@@ -25,24 +25,11 @@
   <body>
     <header class="header"></header>
     <main class="main">
-      <div class="selected">
-        <div class="selected__tag">
-          <h1 class="tag">Frontend</h1>
-          <button class="delete__tag" aria-label="remove tag">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-              <path
-                fill="#FFF"
-                fill-rule="evenodd"
-                d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <button class="selected__clear">Clear</button>
+      <div class="selected hidden">
+        <!-- <button class="selected__clear">Clear</button> -->
       </div>
       <div class="cards">
-        <div class="card photosnap" data-tags="senior html css javaScript">
+        <div class="card photosnap" data-tags="senior html css javascript">
           <div class="card__info__container">
             <div class="card__company">
               <p class="card__company__info">Photosnap</p>
@@ -65,7 +52,7 @@
             <button class="card__tag" data-tag="senior">Senior</button>
             <button class="card__tag" data-tag="html">HTML</button>
             <button class="card__tag" data-tag="css">CSS</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
           </div>
         </div>
         <div class="card manage" data-tags="fullstack midweight python react">
@@ -77,7 +64,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Fullstack Developer</h1>
+              <a href="#" class="card__heading">Fullstack Developer</a>
             </div>
 
             <div class="card__info">
@@ -96,7 +83,7 @@
 
         <div
           class="card account"
-          data-tags=" frontend junior javaScript react sass"
+          data-tags=" frontend junior javascript react sass"
         >
           <div class="card__info__container">
             <div class="card__company">
@@ -105,7 +92,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Junior Frontend Developer</h1>
+              <a href="#" class="card__heading">Junior Frontend Developer</a>
             </div>
 
             <div class="card__info">
@@ -117,20 +104,20 @@
           <div class="card__tags">
             <button class="card__tag" data-tag="frontend">Frontend</button>
             <button class="card__tag" data-tag="junior">Junior</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
             <button class="card__tag" data-tag="react">React</button>
             <button class="card__tag" data-tag="sass">Sass</button>
           </div>
         </div>
 
-        <div class="card myhome" data-tags=" frontend junior css javaScript">
+        <div class="card myhome" data-tags=" frontend junior css javascript">
           <div class="card__info__container">
             <div class="card__company">
               <p class="card__company__info">MyHome</p>
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Junior Frontend Developer</h1>
+              <a href="#" class="card__heading">Junior Frontend Developer</a>
             </div>
 
             <div class="card__info">
@@ -143,12 +130,12 @@
             <button class="card__tag" data-tag="frontend">Frontend</button>
             <button class="card__tag" data-tag="junior">Junior</button>
             <button class="card__tag" data-tag="css">CSS</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
           </div>
         </div>
         <div
           class="card loop--studios"
-          data-tags="fullstack midweight javaScript ruby sass"
+          data-tags="fullstack midweight javascript ruby sass"
         >
           <div class="card__info__container">
             <div class="card__company">
@@ -156,7 +143,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Software Engineer</h1>
+              <a href="#" class="card__heading">Software Engineer</a>
             </div>
 
             <div class="card__info">
@@ -168,7 +155,7 @@
           <div class="card__tags">
             <button class="card__tag" data-tag="fullstack">Fullstack</button>
             <button class="card__tag" data-tag="midweight">Midweight</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
             <button class="card__tag" data-tag="ruby">Ruby</button>
             <button class="card__tag" data-tag="sass">Sass</button>
           </div>
@@ -181,7 +168,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Junior Backend Developer</h1>
+              <a href="#" class="card__heading">Junior Backend Developer</a>
             </div>
 
             <div class="card__info">
@@ -200,7 +187,7 @@
 
         <div
           class="card shortly"
-          data-tags="frontend junior html javaScript sass"
+          data-tags="frontend junior html javascript sass"
         >
           <div class="card__info__container">
             <div class="card__company">
@@ -208,7 +195,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Junior Developer</h1>
+              <a href="#" class="card__heading">Junior Developer</a>
             </div>
 
             <div class="card__info">
@@ -221,14 +208,14 @@
             <button class="card__tag" data-tag="frontend">Frontend</button>
             <button class="card__tag" data-tag="junior">Junior</button>
             <button class="card__tag" data-tag="html">HTML</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
             <button class="card__tag" data-tag="sass">Sass</button>
           </div>
         </div>
 
         <div
           class="card insure"
-          data-tags="frontend junior javaScript vue sass"
+          data-tags="frontend junior javascript vue sass"
         >
           <div class="card__info__container">
             <div class="card__company">
@@ -236,7 +223,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Junior Frontend Developer</h1>
+              <a href="#" class="card__heading">Junior Frontend Developer</a>
             </div>
 
             <div class="card__info">
@@ -248,14 +235,14 @@
           <div class="card__tags">
             <button class="card__tag" data-tag="frontend">Frontend</button>
             <button class="card__tag" data-tag="junior">Junior</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
             <button class="card__tag" data-tag="vue">Vue</button>
             <button class="card__tag" data-tag="sass">Sass</button>
           </div>
         </div>
         <div
           class="card eyecam"
-          data-tags="fullstack midweight javaScript python django"
+          data-tags="fullstack midweight javascript python django"
         >
           <div class="card__info__container">
             <div class="card__company">
@@ -263,7 +250,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Full Stack Engineer</h1>
+              <a href="#" class="card__heading">Full Stack Engineer</a>
             </div>
 
             <div class="card__info">
@@ -275,14 +262,14 @@
           <div class="card__tags">
             <button class="card__tag" data-tag="fullstack">Fullstack</button>
             <button class="card__tag" data-tag="midweight">Midweight</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
             <button class="card__tag" data-tag="python">Python</button>
             <button class="card__tag" data-tag="django">Django</button>
           </div>
         </div>
         <div
           class="card air--filter"
-          data-tags="frontend junior javaScript react sass"
+          data-tags="frontend junior javascript react sass"
         >
           <div class="card__info__container">
             <div class="card__company">
@@ -290,7 +277,7 @@
             </div>
 
             <div class="card__job">
-              <h1 class="card__heading">Front-end Dev</h1>
+              <a href="#" class="card__heading">Front-end Dev</a>
             </div>
 
             <div class="card__info">
@@ -302,7 +289,7 @@
           <div class="card__tags">
             <button class="card__tag" data-tag="frontend">Frontend</button>
             <button class="card__tag" data-tag="junior">Junior</button>
-            <button class="card__tag" data-tag="javaScript">JavaScript</button>
+            <button class="card__tag" data-tag="javascript">JavaScript</button>
             <button class="card__tag" data-tag="react">React</button>
             <button class="card__tag" data-tag="sass">Sass</button>
           </div>
@@ -316,5 +303,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>

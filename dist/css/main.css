@@ -39,15 +39,20 @@ button {
   position: relative;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #fefefe;
   padding: 2rem;
   margin: 0 1rem;
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: transform 0.3s ease-in;
 }
 .selected__tag {
   display: flex;
   align-items: center;
   color: #5ba4a4;
   background-color: #effafa;
+  margin: 0 1rem 1rem;
 }
 .selected__tag .tag {
   font-size: 0.8rem;
@@ -76,6 +81,10 @@ button {
   transition: background-color 0.3s ease;
 }
 
+.selected.hidden {
+  transform: scale(1, 0);
+}
+
 .card {
   position: relative;
   background-color: #fefefe;
@@ -83,9 +92,6 @@ button {
   padding: 2rem 1rem 1rem;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(91, 164, 164, 0.267);
-  transform: scale(1, 1);
-  transform-origin: top;
-  transition: transform 0.3s ease;
 }
 .card__company {
   width: 100%;
@@ -114,6 +120,7 @@ button {
   margin: 0.5rem 0;
   transition: color 0.3s ease;
   text-decoration: none;
+  font-weight: 700;
 }
 .card__info {
   display: flex;
@@ -232,10 +239,6 @@ button {
 
 .card.hidden {
   display: none;
-}
-
-.card.hidden__anim {
-  transform: scale(1, 0);
 }
 
 @media (min-width: 768px) {
