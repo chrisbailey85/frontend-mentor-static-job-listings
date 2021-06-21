@@ -43,9 +43,10 @@ function filterJobs() {
   cards.forEach(card => {
     let dataTags = card.dataset.tags.toLowerCase().split(' ');
     let matchTags = []
-    dataTags.map(x => {
+    dataTags.forEach(x => {
       if (tagsArray.indexOf(x) !== -1) {
         matchTags.push(x)
+        console.log(matchTags)
       }
     })
     if (matchTags.length === tagsArray.length) {
