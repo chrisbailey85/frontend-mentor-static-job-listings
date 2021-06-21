@@ -38,24 +38,24 @@ function selectedTag(data) {
 
 function filterJobs() {
   let tags = document.querySelectorAll('.tag');
-
-  if (tags.length === 0) {
-    cards.forEach(card => card.classList.remove('hidden'))
-    selectedContainer.classList.add('hidden')
-  }
+  let tagsArray = [];
+  tags.forEach(tag => tagsArray.push(tag.textContent.toLowerCase()));
   cards.forEach(card => {
-    const data = card.dataset.tags;
-    tags.forEach(tag => {
-      if (data.includes(tag.textContent.toLocaleLowerCase())) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden')
+    let dataTags = card.dataset.tags.toLowerCase().split(' ');
+    let matchTags = []
+    dataTags.map(x => {
+      if (tagsArray.indexOf(x) !== -1) {
+        matchTags.push(x)
       }
     })
+    if (matchTags.length === tagsArray.length) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
   })
 
 }
-
 function addedClearBtn() {
   let button = document.createElement('button');
   button.innerHTML = 'clear';
